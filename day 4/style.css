@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  gap: 2px;
+  display: grid;
+  border: 1em solid rgb(8, 201, 172);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 2fr 1fr;
+  grid-template-areas:
+    "box1 box2 box2 box2"
+    "box1 box3 box4 box5";
+}
+
+.box1 {
+  background-image: url("https://images.pexels.com/photos/34235329/pexels-photo-34235329.jpeg");
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  grid-area: box1;
+  box-shadow: 10px 20px 25px rgb(16, 199, 178);
+  border: 6px solid rgb(35, 189, 195);
+}
+
+.box2 {
+  background-image: url("https://images.pexels.com/photos/33843056/pexels-photo-33843056.jpeg");
+  background-position: top;
+  background-size: cover;
+  grid-area: box2;
+  border: 6px solid rgb(35, 189, 195);
+  animation: box1 3s ease-in 0s normal;
+}
+@keyframes box1 {
+  from {
+    width: 300px;
+    /* backdrop-filter: unset; */
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.box3 {
+  background-image: url("https://images.pexels.com/photos/31205502/pexels-photo-31205502.jpeg");
+  background-position: center;
+  background-size: cover;
+  grid-area: box3;
+  border: 6px solid rgb(35, 189, 195);
+  animation: box3 3s ease-in 0s infinite;
+}
+@keyframes box3 {
+  from {
+    width: 300%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.box4 {
+  background-image: url("https://images.pexels.com/photos/34207842/pexels-photo-34207842.jpeg");
+  background-position: top;
+  background-size: cover;
+  object-fit: cover;
+  grid-area: box4;
+  border: 6px solid rgb(35, 189, 195);
+  animation: box4 3s ease-in 0s normal;
+}
+@keyframes box4 {
+  from {
+    width: 300%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.box5 {
+  background-image: url("https://images.pexels.com/photos/31128183/pexels-photo-31128183.jpeg");
+  background-position: top;
+  background-size: cover;
+  object-fit: cover;
+  grid-area: box5;
+  border: 6px solid rgb(35, 189, 195);
+  animation: box5 1s ease-in 0s infinite;
+}
+@keyframes box5 {
+  from {
+    width: 50%;
+  }
+  to {
+    width: 110%;
+  }
+}

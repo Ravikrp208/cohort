@@ -1,0 +1,57 @@
+@font-face {
+    font-family:rac;
+    src: url("./sf-pro-display_semibold.woff2");
+}
+
+
+#nav{
+    font-family: rac;
+    height:40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background-color: rgb(58, 58, 58);
+    font-size:10px;
+}
+#nav h4 {
+    color: white;
+    
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#center {
+    height: 100vh; /* full viewport height */
+    width: 100vw;  /* full viewport width */
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    background-image: url(./iphone.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#center h1{
+    color: white;
+    
+    
+}
+#center h1{
+    color:white;
+    
+}
+
+ #link button {
+
+    font-family: rac;
+    background-color: rgb(65, 65, 200);
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    text-align: center;
+ 
+}
