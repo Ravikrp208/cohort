@@ -1,27 +1,11 @@
-// function abcd(A,B){
+var btn = document.querySelector("button");
+var box = document.querySelector("#box");
 
-//     console.log(A+B);
-// }
-// abcd(1,2)
-// // abcd(1,2)
-// // abcd(1, 2);
-// // abcd(1,2)
+btn.addEventListener("click", function () {
+  var c1 = Math.floor(Math.random() * 256);
+  var c2 = Math.floor(Math.random() * 256);
+  var c3 = Math.floor(Math.random() * 256);
 
-// let global =0;
-// function inpure(a) {
-//   console.log(a + global);
-// }
-// global++;
-// inpure(2);
-// inpure(4);
-
-let user = {
-  name: "ravi",
-  age: 23,
-  email: "ravikaarp@gmail.com",
-};
-// Object.freeze(user);
-Object.seal(user);
-user.age=25;
-user.name="rani";
-
+  box.style.backgroundColor = `rgb(${c1},${c2},${c3})`;
+  // box.innerHTML = `rgb(${c1}, ${c2}, ${c3})`;
+});
