@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 
+@property --bgColor {
+  syntax: "<color>";
+  initial-value: rgb(189, 7, 143);
+  inherits: false;
+}
+@keyframes animation {
+  from {
+    --bgColor: red;
+  }
+  to {
+    --bgColor: blue;
+  }
+}
+.box {
+  height: 200px;
+  width: 400px;
+  background-color: var(--bgColor);
+  animation: animatBgColor;
+} */
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes borderAnimate {
+  from {
+    --rotate: 0deg;
+  }
+  to {
+    --rotate: 360deg;
+  }
+}
+
+.box {
+  max-width: 300px;
+  padding: 10px;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 0 60px rgb(46, 29, 37);
+  border-radius: 15px;
+
+  /* Border animation using conic-gradient */
+  background:
+    linear-gradient(black) padding-box,
+    conic-gradient(from var(--rotate), rgb(255, 0, 123), black, rgb(255, 0, 123)) border-box;
+
+  border: 5px solid transparent;
+
+  animation: borderAnimate 4s linear infinite;
+}
+
+.img {
+  height: 100%;
+}
