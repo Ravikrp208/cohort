@@ -36,8 +36,8 @@ class Bootle{
   drink(){}
 }
 
-let myBootle = new Bootle();
-let myBottle1 = new Bottle();
+let mybootle = new Bootle();
+// let myBottle1 = new Bottle();
 
 let obj = {
   name: "Ravi kumar pandit"
