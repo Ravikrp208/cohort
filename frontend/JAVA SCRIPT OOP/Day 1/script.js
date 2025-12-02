@@ -24,3 +24,39 @@ class book {
 }
 let k= new book("java",590, "Rani","raegreen");
 let k2 = new book();
+
+class Bootle{
+  constructor()
+  {
+    this.color ="red";
+    this.material="platic";
+    this.price=100;
+  }
+  fill(){}
+  drink(){}
+}
+
+let myBootle = new Bootle();
+let myBottle1 = new Bottle();
+
+let obj = {
+  name: "Ravi kumar pandit"
+};
+
+function abc() {
+
+}
+class Sketch{
+  constructor()
+  {
+    this.Character ="Ravi baby";
+    this.color="blue";
+    this.somefun= function(){};
+    
+  }
+  speak(){};
+  walk(){};
+
+}
+
+let sketch =new Sketch();
