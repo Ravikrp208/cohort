@@ -109,3 +109,21 @@ class Car {
 
 let car1 = new Car("RRR",280);
 let car2 = new Car ("toyata",180);
+
+// Question 6
+
+class Student {
+    constructor( name, rollnumber)
+    {
+        this.name = name;
+        this.rollnumber =rollnumber;
+
+    }
+    intruduce = function()
+    {  console.log(this.name + "" + rollnumber);
+
+    }
+  
+}
+
+let student = new Student("Ravi kuamar panadit",10021)
