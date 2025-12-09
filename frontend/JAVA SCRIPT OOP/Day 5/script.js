@@ -1,12 +1,12 @@
-fetch("https://randomuser.me/api/")
-  .then((raw) => raw.json())
-  .then((data) => {
-    console.log(data); 
-    console.log(data.results[0].name.first); 
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+// fetch("https://randomuser.me/api/")
+//   .then((raw) => raw.json())
+//   .then((data) => {
+//     console.log(data); 
+//     console.log(data.results[0].name.first); 
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
 
 
 let h1 = document.querySelector('h1');
@@ -21,3 +21,18 @@ btn.addEventListener("click",function (){
 })
 
 console.info("i am a software developer")
+
+let prm = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    // reject();
+    resolve();
+  }, 3000);
+});
+
+prm
+  .then(function () {
+    console.log("promise is resolved");
+  })
+  .catch(function () {
+    console.log("rejected");
+  });
