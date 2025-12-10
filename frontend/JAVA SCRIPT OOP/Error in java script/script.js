@@ -1,0 +1,1 @@
+// there are many type of error handling in java Script
