@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>find error handling in java script </h1>
-    <script src="script.js"></script>
+  <div class="container">
+    <h1>Weather App </h1>
+    <input type="text" id="cityInput" placeholder="Enter city name">
+    <button id="searchBtn">Search</button>
+    <div id="error"></div>
+    <table id="weatherTable">
+      <thead>
+        <tr>
+          <th>City</th>
+          <th>Temp (°C)</th>
+          <th>Weather</th>
+          <th>Icon</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
