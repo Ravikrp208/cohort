@@ -1,58 +1,132 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
-
-.container {
-  background: white;
+  align-items: flex-start;
+  min-height: 100vh;
   padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
+/* Container */
+.container {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgb(255, 0, 123);
+}
+
+/* Search input & button */
 input {
-  padding: 10px;
-  width: 200px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+  padding: 12px 15px;
+  width: 60%;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+input:focus {
+  box-shadow: 0 0 10px rgb(255, 0, 123);
 }
 
 button {
-  padding: 10px 15px;
-  border-radius: 8px;
+  padding: 12px 20px;
+  border-radius: 10px;
   border: none;
-  background-color: #4caf50;
+  background-color: rgb(255, 0, 123);
   color: white;
+  font-size: 1rem;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #ff33a1;
+  transform: scale(1.05);
 }
 
-table {
-  width: 100%;
-  margin-top: 20px;
-  border-collapse: collapse;
-}
-
-th, td {
-  border: 1px solid #ddd;
-  padding: 10px;
-}
-
-th {
-  background-color: #4caf50;
-  color: white;
-}
-
+/* Error message */
 #error {
-  color: red;
+  color: #ff3333;
   margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Card animation setup */
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes borderAnimate {
+  from { --rotate: 0deg; }
+  to { --rotate: 360deg; }
+}
+
+/* Weather card style */
+
+.weather-card {
+  max-width: 100%;
+  background: linear-gradient(#111111, #111111) padding-box,
+              conic-gradient(from var(--rotate), rgb(255, 0, 123), black, rgb(255, 0, 123)) border-box;
+  border: 5px solid rgba(255, 255, 255, 0);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 15px 0;
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: borderAnimate 10s linear infinite;
+  animation-play-state: paused;
+  box-shadow: 0 0 10px rgb(255, 0, 123, 0.2);
+  transition: all 0.3s linear;
+}
+
+.weather-card:hover {
+  animation-play-state: running;
+  box-shadow: 0 0 50px rgb(255, 0, 123);
+  color: rgb(255, 0, 123);
+  text-shadow: 0 0 10px rgb(255, 0, 123);
+  transform: translateY(-5px);
+}
+
+/* Weather info inside card */
+
+.weather-card .city-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.weather-card .temp {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.weather-card .desc {
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.weather-card img {
+  width: 50px;
+  height: 50px;
 }
