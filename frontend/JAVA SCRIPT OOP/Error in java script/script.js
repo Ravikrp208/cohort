@@ -1,74 +1,74 @@
-// // there are many type of error handling in java Script
+// there are many type of error handling in java Script
 
-// try {
-//     let a=12;
-//     console.log(a);
+try {
+    let a=12;
+    console.log(a);
 
-// }
-// catch (error){
-//     console.log(error);
-// }
-// finally
-// {
-//   console.log("Ravi kumar pandit")
+}
+catch (error){
+    console.log(error);
+}
+finally
+{
+  console.log("Ravi kumar pandit")
 
-// }
-
-
+}
 
 
-// // 1. Promises how to return data? //
 
 
-// const userlist = [
-//   "ravikrp208@gmail.com",
-//   "ranikr403@gmail.com",
-//   "shiavam203@gmailcom",
-// ];
+// 1. Promises how to return data? //
 
-// // Fake email sender (returns a Promise)
-// function sendEmail(email) 
-// {
-//   return new Promise((resolve, reject) => 
-//     {
-//     let time = Math.floor(Math.random() * 5); 
 
-//     setTimeout(() =>
-//        {
-//       let probability = Math.floor(Math.random() * 10);
+const userlist = [
+  "ravikrp208@gmail.com",
+  "ranikr403@gmail.com",
+  "shiavam203@gmailcom",
+];
 
-//       if (probability <= 5)
-//          resolve(`Email successfully sent to ${email}`);
-//       else
-//          reject(`Email NOT sent to ${email}`);
-//     }, time * 1000);
-//   });
-// }
+// Fake email sender (returns a Promise)
+function sendEmail(email) 
+{
+  return new Promise((resolve, reject) => 
+    {
+    let time = Math.floor(Math.random() * 5); 
 
-// // Function to send email to list
+    setTimeout(() =>
+       {
+      let probability = Math.floor(Math.random() * 10);
 
-// function sendEmails(userlist) {
-//   let allResponses = userlist.map((email) => {
-//     return sendEmail(email)
-//       .then((data) => {
-//         console.log(data);
-//         return data;
-//       })
-//       .catch((err) => {
-//         console.log(err);
-//         return err;
-//       });
-//   });
+      if (probability <= 5)
+         resolve(`Email successfully sent to ${email}`);
+      else
+         reject(`Email NOT sent to ${email}`);
+    }, time * 1000);
+  });
+}
 
-//   // Wait for all Promises
+// Function to send email to list
+
+function sendEmails(userlist) {
+  let allResponses = userlist.map((email) => {
+    return sendEmail(email)
+      .then((data) => {
+        console.log(data);
+        return data;
+      })
+      .catch((err) => {
+        console.log(err);
+        return err;
+      });
+  });
+
+  // Wait for all Promises
   
-//   Promise.allSettled(allResponses).then((res) => {
-//     console.log("\nFinal Results:");
-//     console.log(res);
-//   });
-// }
+  Promise.allSettled(allResponses).then((res) => {
+    console.log("\nFinal Results:");
+    console.log(res);
+  });
+}
 
-// sendEmails(userlist);
+sendEmails(userlist);
 
 // Question 2. how to cheak weather //
 
