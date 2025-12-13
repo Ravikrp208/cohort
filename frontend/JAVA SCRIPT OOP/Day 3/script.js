@@ -23,3 +23,13 @@ abc (function ( fun2){
 
 
 // call back //
+
+function Ravi (address, fn )
+{
+    fn ({phoneno :905481512 , lag: 121215})
+}
+
+Ravi("Ravi krp", function (details)
+{
+    console.log(details);
+})

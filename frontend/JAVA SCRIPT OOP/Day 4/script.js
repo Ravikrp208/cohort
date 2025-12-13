@@ -8,3 +8,14 @@ async function second() {
 }
 
 second();
+
+function instagram(username , cd){
+
+  setTimeout (function (){
+    cd({ id: 1, username: "Ravi kumar pandit", age: 24 });
+  },2000)
+  
+}
+instagram("Ravi",function (data){
+  console.log(data)
+})
