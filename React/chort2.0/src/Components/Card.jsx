@@ -6,7 +6,7 @@ const Card = (props) => {
  
   
   return (
-    <div className='bg-amber-500 h-40 w- 40 border-2 gap-1 text-5xl font-bold'>
+    <div className="bg-red-800 border text-3xl font-bold m-5 p-5 w-100 h-100">
       
         <h1 className=''> {props.user}
 
