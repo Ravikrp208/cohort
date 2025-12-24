@@ -16,6 +16,7 @@ const Navbar = ({ title, url, link }) => {
           </li>
         ))}
       </ul>
+      
     </div>
   );
 };
