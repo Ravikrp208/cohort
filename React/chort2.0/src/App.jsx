@@ -3,6 +3,7 @@ import Card from "./Components/Card";
 import Navbar from "./Components/Navbar";
 import Count from "./Components/count";
 import Change from "./Components/Change";
+import Form from "./Formpage/Form";
 
 const App = () => {
   const age = 24;
@@ -71,8 +72,10 @@ const App = () => {
     // </>
 
     <div>
-      <Count/>
-      <Change/>
+      {/* <Count/> */}
+      {/* <Change/> */}
+      <Form/>
+
     </div>
   );
 };
