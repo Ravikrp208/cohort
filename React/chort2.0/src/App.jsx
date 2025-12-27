@@ -4,6 +4,7 @@ import Navbar from "./Components/Navbar";
 import Count from "./Components/count";
 import Change from "./Components/Change";
 import Form from "./Formpage/Form";
+import Loginpage from "./Work Page/Login";
 
 const App = () => {
   const age = 24;
@@ -75,6 +76,7 @@ const App = () => {
       {/* <Count/> */}
       {/* <Change/> */}
       <Form/>
+      <Loginpage/>
 
     </div>
   );
