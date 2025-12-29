@@ -5,6 +5,7 @@ import Count from "./Components/count";
 import Change from "./Components/Change";
 import Form from "./Formpage/Form";
 import Loginpage from "./Work Page/Login";
+import Studentlog from "./assets/Cohort2.0/Studentlog";
 
 const App = () => {
   const age = 24;
@@ -75,8 +76,9 @@ const App = () => {
     <div>
       {/* <Count/> */}
       {/* <Change/> */}
-      <Form/>
-      <Loginpage/>
+      {/* <Form/> */}
+      {/* <Loginpage/> */}
+      <Studentlog/>
       
       
 
