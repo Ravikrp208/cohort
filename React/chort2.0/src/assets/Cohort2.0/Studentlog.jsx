@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Card from "./Card";
 
 const Studentlog = () => {
   const [userName, setName] = useState("");
@@ -22,20 +23,25 @@ const Studentlog = () => {
     setuserRole("");
     setuserDesc("");
   };
+  const deleteHandler = (idx) => {
+    const copyUsers = [...allUser];
+    copyUsers.splice(idx, 1);
+    setallUser(copyUsers);
+  };
 
   return (
     <div className=" bg-black h-screen   text-white">
       <form
-        onChange={() => {
-          submitHandler();
+        onSubmit={(e) => {
+          submitHandler(e);
         }}
-        className="flex flex-col"
+        className="flex flex-col "
       >
         <input
           value={userName}
           onChange={(e) => {
             setName(e.target.value);
-            console.log(userName);
+            // console.log(userName);
           }}
           className="border-2 p-5 text-4xl font-semibold  rounded-2xl m-2 w-[45%]"
           type="text"
@@ -73,8 +79,38 @@ const Studentlog = () => {
           Create User
         </button>
       </form>
+
+      <div className="p-4  py-10 lg: gap-2 flex flex-wrap  ">
+        {allUser.map(function (elem, idx) {
+          return (
+            
+            <div
+              key={idx}
+              className="lg:w-[23vw] md:w-[30vw] sm:w-[45vw] rounded-xl flex items-center justify-center flex-col bg-white text-black"
+            >
+              <img
+                className=" p-3 h-24 w-24 rounded-full object-center object-cover  "
+                src={elem.userURL}
+                alt=""
+              />
+              <h1 className="text-xl font-bold">{elem.userName}</h1>
+              <h5 className="text-base text-blue-600 font-semibold m-2 ">
+                {" "}
+                {elem.userRole}{" "}
+              </h5>
+              <p className="text-sm font-medium leading-light">
+                {elem.userDesc}
+              </p>
+              <button onClick={() =>
+                deleteHandler(idx)
+              } className=" cursor-pointer active:scale-95 px-10 text-sm rounded bg-red-700 text-white font-semibold m-10 ">
+                remove
+              </button>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
-
 export default Studentlog;
