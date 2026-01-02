@@ -8,7 +8,7 @@ import Loginpage from "./Work Page/Login";
 import Studentlog from "./assets/Cohort2.0/Studentlog";
 import Axios from "./assets/Cohort2.0/Axios";
 import UseEffect from "./assets/Cohort2.0/UseEffect";
-import Mylog from "./Formpage/Mylog";
+
 
 const App = () => {
   const age = 24;
@@ -82,9 +82,9 @@ const App = () => {
       {/* <Form/> */}
       {/* <Loginpage/> */}
       {/* <Studentlog/> */}
-      {/* <Axios/> */}
-      {/* <UseEffect/> */}
-      <Mylog/>
+      <Axios/>
+      <UseEffect/>
+    
       
       
 
