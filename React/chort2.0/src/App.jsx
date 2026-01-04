@@ -8,6 +8,8 @@ import Loginpage from "./Work Page/Login";
 import Studentlog from "./assets/Cohort2.0/Studentlog";
 import Axios from "./assets/Cohort2.0/Axios";
 import UseEffect from "./assets/Cohort2.0/UseEffect";
+import About from "./Pages/About";
+
 
 
 const App = () => {
@@ -82,10 +84,12 @@ const App = () => {
       {/* <Form/> */}
       {/* <Loginpage/> */}
       {/* <Studentlog/> */}
-      <Axios/>
+      {/* <Axios/> */}
       <UseEffect/>
-    
       
+      
+ 
+
       
 
     </div>
