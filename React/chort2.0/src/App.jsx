@@ -9,6 +9,8 @@ import Studentlog from "./assets/Cohort2.0/Studentlog";
 import Axios from "./assets/Cohort2.0/Axios";
 import UseEffect from "./assets/Cohort2.0/UseEffect";
 import About from "./Pages/About";
+import Myport from "./Work Page/Myport";
+import Color from "./Work Page/Color";
 
 
 
@@ -85,7 +87,11 @@ const App = () => {
       {/* <Loginpage/> */}
       {/* <Studentlog/> */}
       {/* <Axios/> */}
-      <UseEffect/>
+      {/* <UseEffect/> */}
+      {/* <Myport/> */}
+      <Color/>
+      
+
       
       
  
