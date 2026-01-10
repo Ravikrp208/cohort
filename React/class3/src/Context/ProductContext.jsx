@@ -5,7 +5,7 @@ import axios from "axios";
 export const ProductContext = createContext();
 
 // Context Provider Component
-const ProductProvider = ({ props }) => {
+const ProductProvider = (props ) => {
   const [productData, setProductData] = useState([]);
 
   const getData = async () => {
@@ -22,7 +22,7 @@ const ProductProvider = ({ props }) => {
   }, []);
 
   return (
-    <ProductContext.Provider value={{ productData }}>
+    <ProductContext.Provider value={productData }>
       {props.children}
     </ProductContext.Provider>
   );
