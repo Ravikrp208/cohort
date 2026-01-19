@@ -1,0 +1,14 @@
+* basic of java script with Es6 + features *
+
+ (1) variable -
+     [ var , let ,const ] 
+ (2) logging with javascript -
+     [console.log () , console.info(), console.warn(), prompt , alert ]
+ (3) Working with String in JS and there -
+     [splice , slice , template string , split , replace , includes ]    
+ (4) JavaScript Data Types -
+      [float , number , string , boolean , null , array , object , Symbol , Undefined ]  
+ (5)     
+
+ (6) Basic Operators(Arithmetic, Assignment, Increment, Decrement, Comparison, Logical, Bitwise) -
+       [+ ,  ,  , / ,++ , - , == , === , != ,and more ] 
