@@ -1,0 +1,69 @@
+/* Buttons */
+.btn-primary {
+  @apply w-full bg-blue-600 text-white py-2 rounded-lg
+         hover:bg-blue-700 transition font-medium;
+}
+
+.btn-secondary {
+  @apply w-full bg-slate-700 text-white py-2 rounded-lg
+         hover:bg-slate-800 transition font-medium;
+}
+
+/* Inputs */
+.input {
+  @apply w-full mt-1 px-2 py-1 border rounded-md
+         focus:outline-none focus:ring-2 focus:ring-blue-400;
+}
+
+/* Canvas */
+.canvas {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+
+/* Canvas Elements */
+.element {
+  position: absolute;
+  cursor: move;
+  user-select: none;
+}
+
+.selected {
+  outline: 2px solid #2563eb;
+}
+
+/* Resize Handle */
+.resize-handle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #007bff;
+}
+
+.resize-handle.nw {
+  top: -4px;
+  left: -4px;
+  cursor: nw-resize;
+}
+
+.resize-handle.ne {
+  top: -4px;
+  right: -4px;
+  cursor: ne-resize;
+}
+
+.resize-handle.sw {
+  bottom: -4px;
+  left: -4px;
+  cursor: sw-resize;
+}
+
+.resize-handle.se {
+  bottom: -4px;
+  right: -4px;
+  cursor: se-resize;
+}

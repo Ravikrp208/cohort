@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Figma Editor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .canvas {
+        position: relative;
+        width: 100%;
+        height: 600px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        overflow: hidden;
+      }
+      .element {
+        position: absolute;
+        border: 1px solid transparent;
+        cursor: move;
+      }
+      .element.selected {
+        border: 2px solid #007bff;
+      }
+      .resize-handle {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background-color: #007bff;
+        cursor: nw-resize;
+      }
+      .resize-handle.se {
+        cursor: se-resize;
+      }
+      .resize-handle.sw {
+        cursor: sw-resize;
+      }
+      .resize-handle.ne {
+        cursor: ne-resize;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <div class="flex h-screen">
+      <!-- Left Sidebar -->
+      <div class="w-64 bg-white shadow-lg p-4">
+        <h2 class="text-lg font-bold mb-4">Tools</h2>
+        <button
+          id="add-rect"
+          class="w-full bg-blue-500 text-white py-2 mb-2 rounded"
+        >
+          Add Rectangle
+        </button>
+        <button
+          id="add-text"
+          class="w-full bg-green-500 text-white py-2 mb-4 rounded"
+        >
+          Add Text
+        </button>
+        <h2 class="text-lg font-bold mb-4">Properties</h2>
+        <div id="properties" class="hidden">
+          <label class="block mb-2"
+            >Width:
+            <input id="prop-width" type="number" class="border p-1 w-full"
+          /></label>
+          <label class="block mb-2"
+            >Height:
+            <input id="prop-height" type="number" class="border p-1 w-full"
+          /></label>
+          <label class="block mb-2"
+            >Background:
+            <input id="prop-bg" type="color" class="border p-1 w-full"
+          /></label>
+          <label id="text-label" class="block mb-2 hidden"
+            >Text: <input id="prop-text" type="text" class="border p-1 w-full"
+          /></label>
+          <div class="mt-4">
+            <button
+              id="layer-up"
+              class="w-full bg-gray-500 text-white py-1 mb-1 rounded"
+            >
+              Layer Up
+            </button>
+            <button
+              id="layer-down"
+              class="w-full bg-gray-500 text-white py-1 rounded"
+            >
+              Layer Down
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Center Canvas -->
+      <div class="flex-1 p-4">
+        <div id="canvas" class="canvas"></div>
+      </div>
+      <!-- Right Panel (Layers) -->
+      <div class="w-64 bg-white shadow-lg p-4">
+        <h2 class="text-lg font-bold mb-4">Layers</h2>
+        <div id="layers" class="space-y-2"></div>
+        <button
+          id="export-json"
+          class="w-full bg-purple-500 text-white py-2 mt-4 rounded"
+        >
+          Export JSON
+        </button>
+        <button
+          id="export-html"
+          class="w-full bg-orange-500 text-white py-2 mt-2 rounded"
+        >
+          Export HTML
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
